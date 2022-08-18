@@ -25,6 +25,7 @@ class HomeControllerTest {
     @Test
     public void testResponse() throws Exception{
         this.mvc.perform(get("/"))
-                .andExpect(MockMvcResultMatchers.status().isOk());
+                .andExpect(MockMvcResultMatchers.status().isOk())
+                .andExpect(MockMvcResultMatchers.content().contentType("application/json"));
     }
 }
